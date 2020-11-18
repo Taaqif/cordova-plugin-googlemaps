@@ -228,9 +228,9 @@
 
 
     <framework src="src/android/frameworks/pgm-custom.gradle" custom="true" type="gradleReference"/>
-    <preference name="API_KEY_FOR_ANDROID" default="" />
+    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" default="" />
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <meta-data android:name="com.google.android.geo.API_KEY" android:value="$API_KEY_FOR_ANDROID"/>
+      <meta-data android:name="com.google.android.geo.API_KEY" android:value="$GOOGLE_MAPS_ANDROID_API_KEY"/>
       <!-- Google Play Services SDK -->
       <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
       <!-- for Android 9 or above -->
@@ -286,7 +286,7 @@
 
   <!-- ios -->
   <platform name="ios">
-    <preference name="API_KEY_FOR_IOS" />
+    <preference name="GOOGLE_MAPS_IOS_API_KEY" />
     <preference name="LOCATION_WHEN_IN_USE_DESCRIPTION" default="This app wants to get your location while this app runs only."/>
     <preference name="LOCATION_ALWAYS_USAGE_DESCRIPTION" default="This app wants to get your location always, even this app runs in background."/>
 
@@ -431,7 +431,7 @@
     <resource-file src="src/ios/strings/pgm_Localizable_vi.json" target="pgm_Localizable_vi.json"/>
     
     <config-file target="*-Info.plist" parent="Google Maps API Key">
-        <string>$API_KEY_FOR_IOS</string>
+        <string>$GOOGLE_MAPS_IOS_API_KEY</string>
     </config-file>
     
     <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
