@@ -228,9 +228,9 @@
 
 
     <framework src="src/android/frameworks/pgm-custom.gradle" custom="true" type="gradleReference"/>
-
+    <preference name="API_KEY_FOR_ANDROID" default="" />
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <meta-data android:name="com.google.android.geo.API_KEY" android:value="${GOOGLE_MAPS_ANDROID_API_KEY}"/>
+      <meta-data android:name="com.google.android.geo.API_KEY" android:value="$API_KEY_FOR_ANDROID"/>
       <!-- Google Play Services SDK -->
       <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
       <!-- for Android 9 or above -->
